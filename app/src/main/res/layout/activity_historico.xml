@@ -5,39 +5,97 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:padding="20dp"
     tools:context=".HistoricoActivity">
 
-    <TextView
-        android:id="@+id/tituloHistorico"
-        android:layout_width="wrap_content"
+    <!-- Card de Cabeçalho do Histórico -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardHeader"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Histórico de jogadas"
-        android:textSize="24sp"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/listaHistorico"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:paddingTop="20dp"
-        android:text="Nenhuma jogada registrada."
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/voltar"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tituloHistorico" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
 
+            <TextView
+                android:id="@+id/tituloHistorico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:text="Histórico de jogadas"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:alpha="0.8"
+                android:text="Resumo de vitórias da partida"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Card para exibir o conteúdo do histórico -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardConteudo"
+        android:layout_width="339dp"
+        android:layout_height="366dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardHeader"
+        app:layout_constraintStart_toStartOf="@+id/cardHeader"
+        app:layout_constraintTop_toBottomOf="@+id/cardHeader"
+        app:strokeColor="?attr/colorPrimary"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="364dp"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/listaHistorico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="8dp"
+                android:text="Nenhuma jogada registrada."
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Botão Voltar -->
     <Button
         android:id="@+id/voltar"
-        style="@style/BotaoPontuacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
         android:text="Voltar"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/cardConteudo"
+        app:layout_constraintStart_toStartOf="@+id/cardConteudo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

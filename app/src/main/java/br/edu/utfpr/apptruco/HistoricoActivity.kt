@@ -21,15 +21,17 @@ class HistoricoActivity : AppCompatActivity() {
             insets
         }
 
-        val nomeJ1 = intent.getStringExtra("nomeJ1")
-        val nomeJ2 = intent.getStringExtra("nomeJ2")
+        val nomeJ1 = intent.getStringExtra("nomeJ1") ?: "Jogador 1"
+        val nomeJ2 = intent.getStringExtra("nomeJ2") ?: "Jogador 2"
         val vitoriasJ1 = intent.getIntExtra("vitoriasJ1", 0)
         val vitoriasJ2 = intent.getIntExtra("vitoriasJ2", 0)
 
         val voltar = findViewById<Button>(R.id.voltar)
         val historico = findViewById<TextView>(R.id.listaHistorico)
 
-        historico.text = "$nomeJ1: $vitoriasJ1 vitorias\n$nomeJ2: $vitoriasJ2 vitorias"
+        historico.text = "🏆 Placares Acumulados:\n\n" +
+                "• $nomeJ1: $vitoriasJ1 vitória(s)\n" +
+                "• $nomeJ2: $vitoriasJ2 vitória(s)"
 
         voltar.setOnClickListener {
             finish()

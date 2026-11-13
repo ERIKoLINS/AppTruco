@@ -1,87 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/nome_jogador1"
-        android:layout_width="wrap_content"
+    <!-- Cabeçalho -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardHeader"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="80dp"
-        android:text="Jogador 1:"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutJogador1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Nome do jogador 1"
-        app:layout_constraintEnd_toEndOf="@+id/salvar"
-        app:layout_constraintStart_toStartOf="@+id/nome_jogador1"
-        app:layout_constraintTop_toBottomOf="@+id/nome_jogador1">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputJogador1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/nome_jogador2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Jogador 2:"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/nome_jogador1"
-        app:layout_constraintTop_toBottomOf="@+id/layoutJogador1" />
+        android:layout_marginEnd="24dp"
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutJogador2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Nome do jogador 2"
-        app:layout_constraintEnd_toEndOf="@+id/layoutJogador1"
-        app:layout_constraintStart_toStartOf="@+id/nome_jogador2"
-        app:layout_constraintTop_toBottomOf="@+id/nome_jogador2">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputJogador2"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-    <Button
-        android:id="@+id/salvar"
-        style="@style/BotaoPontuacao"
+            <TextView
+                android:id="@+id/tituloNomes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:text="Nomes dos Jogadores"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:alpha="0.8"
+                android:text="Informe os nomes dos jogadores"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Conteúdo -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardConteudo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:text="Confirmar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/nome_jogador2"
-        app:layout_constraintTop_toBottomOf="@id/layoutJogador2" />
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardHeader"
+        app:layout_constraintStart_toStartOf="@+id/cardHeader"
+        app:layout_constraintTop_toBottomOf="@id/cardHeader"
+        app:strokeColor="?attr/colorPrimary"
+        app:strokeWidth="1dp">
 
-    <Button
-        android:id="@+id/voltar"
-        style="@style/BotaoPontuacao"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Voltar"
-        app:layout_constraintTop_toBottomOf="@id/salvar"
-        app:layout_constraintEnd_toEndOf="@+id/salvar"
-        app:layout_constraintStart_toStartOf="@+id/salvar" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Jogador 1 -->
+            <TextView
+                android:id="@+id/nome_jogador1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jogador 1:"
+                android:textSize="18sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutJogador1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Nome do jogador 1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputJogador1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Jogador 2 -->
+            <TextView
+                android:id="@+id/nome_jogador2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Jogador 2:"
+                android:textSize="18sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutJogador2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Nome do jogador 2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputJogador2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Confirmar -->
+            <Button
+                android:id="@+id/salvar"
+                style="@style/BotaoPontuacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Confirmar" />
+
+            <!-- Voltar -->
+            <Button
+                android:id="@+id/voltar"
+                style="@style/BotaoPontuacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Voltar" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

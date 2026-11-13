@@ -5,205 +5,312 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/Jogador1"
-        android:layout_width="wrap_content"
+    <!-- Cabeçalho -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardHeader"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="50dp"
-        android:text="Jogador 1:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/jogador2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Jogador 2:"
-        app:layout_constraintStart_toStartOf="@+id/Jogador1"
-        app:layout_constraintTop_toBottomOf="@+id/ponto1_jog1"
-        tools:ignore="HardcodedText" />
-
-    <Button
-        android:id="@+id/ponto1_jog1"
-        style="@style/BotaoPontuacao"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="+1"
-        app:layout_constraintEnd_toStartOf="@+id/ponto3_jog1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Jogador1"
-        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/ponto3_jog1"
-        style="@style/BotaoPontuacao"
-        android:layout_marginStart="4dp"
-        android:text="+3"
-        app:layout_constraintEnd_toStartOf="@+id/ponto6_jog1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ponto1_jog1"
-        app:layout_constraintTop_toTopOf="@+id/ponto1_jog1"
-        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/ponto6_jog1"
-        style="@style/BotaoPontuacao"
-        android:layout_marginStart="4dp"
-        android:text="+6"
-        app:layout_constraintEnd_toStartOf="@+id/ponto9_jog1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ponto3_jog1"
-        app:layout_constraintTop_toTopOf="@+id/ponto1_jog1"
-        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/ponto9_jog1"
-        style="@style/BotaoPontuacao"
-        android:layout_marginStart="4dp"
-        android:text="+9"
-        app:layout_constraintEnd_toStartOf="@+id/ponto12_jog1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ponto6_jog1"
-        app:layout_constraintTop_toTopOf="@+id/ponto1_jog1"
-        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/ponto12_jog1"
-        style="@style/BotaoPontuacao"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="8dp"
-        android:text="+12"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ponto9_jog1"
-        app:layout_constraintTop_toTopOf="@+id/ponto1_jog1"
-        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/ponto1_jog2"
-        style="@style/BotaoPontuacao"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="+1"
-        app:layout_constraintEnd_toStartOf="@+id/ponto3_jog2"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jogador2"
-        tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/ponto3_jog2"
-        style="@style/BotaoPontuacao"
-        android:layout_marginStart="4dp"
-        android:text="+3"
-        app:layout_constraintEnd_toStartOf="@+id/ponto6_jog2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ponto1_jog2"
-        app:layout_constraintTop_toTopOf="@+id/ponto1_jog2"
-        tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-    <Button
-        android:id="@+id/ponto6_jog2"
-        style="@style/BotaoPontuacao"
-        android:layout_marginStart="4dp"
-        android:text="+6"
-        app:layout_constraintEnd_toStartOf="@+id/ponto9_jog2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ponto3_jog2"
-        app:layout_constraintTop_toTopOf="@+id/ponto1_jog2"
-        tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:text="Marcador de Truco"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/ponto9_jog2"
-        style="@style/BotaoPontuacao"
-        android:layout_marginStart="4dp"
-        android:text="+9"
-        app:layout_constraintEnd_toStartOf="@+id/ponto12_jog2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ponto6_jog2"
-        app:layout_constraintTop_toTopOf="@+id/ponto1_jog2"
-        tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:alpha="0.8"
+                android:text="Partida até 12 pontos"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="12sp" />
 
-    <Button
-        android:id="@+id/ponto12_jog2"
-        style="@style/BotaoPontuacao"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="8dp"
-        android:text="+12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ponto9_jog2"
-        app:layout_constraintTop_toTopOf="@+id/ponto1_jog2"
-        tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
-    <TextView
-        android:id="@+id/txtPontosJ1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/Jogador1"
-        app:layout_constraintTop_toTopOf="@+id/Jogador1"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/txtPontosJ2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/jogador2"
-        app:layout_constraintTop_toTopOf="@+id/jogador2"
-        tools:ignore="HardcodedText" />
-
-    <Button
-        android:id="@+id/historico"
-        style="@style/BotaoPontuacao"
+    <!-- Conteúdo Principal -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardConteudo"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:text="Historico de jogadas"
-        app:layout_constraintEnd_toEndOf="@+id/ponto12_jog2"
-        app:layout_constraintStart_toStartOf="@+id/ponto1_jog2"
-        app:layout_constraintTop_toBottomOf="@+id/ponto6_jog2"
-        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardHeader"
+        app:layout_constraintStart_toStartOf="@+id/cardHeader"
+        app:layout_constraintTop_toBottomOf="@id/cardHeader"
+        app:strokeColor="?attr/colorPrimary"
+        app:strokeWidth="1dp">
 
-    <Button
-        android:id="@+id/zerar_historico"
-        style="@style/BotaoPontuacao"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Zerar histórico"
-        app:layout_constraintEnd_toEndOf="@+id/ponto12_jog2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/ponto1_jog2"
-        app:layout_constraintTop_toBottomOf="@+id/historico"
-        tools:ignore="HardcodedText,TextContrastCheck" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
 
-    <Button
-        android:id="@+id/inf_nomes"
-        style="@style/BotaoPontuacao"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Informar nomes"
-        app:layout_constraintEnd_toEndOf="@+id/ponto12_jog2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/ponto1_jog2"
-        app:layout_constraintTop_toBottomOf="@+id/zerar_historico"
-        tools:ignore="HardcodedText,TextContrastCheck" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Jogador 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Jogador1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jogador 1:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/txtPontosJ1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <!-- Botões de Pontuação Jogador 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/ponto1_jog1"
+                        style="@style/BotaoPontuacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:text="+1"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/ponto3_jog1"
+                        style="@style/BotaoPontuacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:text="+3"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/ponto6_jog1"
+                        style="@style/BotaoPontuacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:text="+6"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/ponto9_jog1"
+                        style="@style/BotaoPontuacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:text="+9"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/ponto12_jog1"
+                        style="@style/BotaoPontuacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_weight="1"
+                        android:text="+12"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <!-- Separador -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="?attr/colorPrimary"
+                    android:alpha="0.2" />
+
+                <!-- Jogador 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/jogador2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jogador 2:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/txtPontosJ2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <!-- Botões de Pontuação Jogador 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/ponto1_jog2"
+                        style="@style/BotaoPontuacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:text="+1"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/ponto3_jog2"
+                        style="@style/BotaoPontuacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:text="+3"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/ponto6_jog2"
+                        style="@style/BotaoPontuacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:text="+6"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/ponto9_jog2"
+                        style="@style/BotaoPontuacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:text="+9"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/ponto12_jog2"
+                        style="@style/BotaoPontuacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_weight="1"
+                        android:text="+12"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <!-- Separador -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="?attr/colorPrimary"
+                    android:alpha="0.2" />
+
+                <!-- Ações -->
+                <Button
+                    android:id="@+id/inf_nomes"
+                    style="@style/BotaoPontuacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Informar nomes"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/historico"
+                    style="@style/BotaoPontuacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Historico de jogadas"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/zerar_historico"
+                    style="@style/BotaoPontuacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Zerar histórico"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
