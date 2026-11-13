@@ -1,6 +1,7 @@
 package br.edu.utfpr.apptruco
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.os.Bundle
 import android.content.Intent
 import android.widget.Button
@@ -151,17 +152,35 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+
     private fun venceuPartida(jogador: Int) {
+        val nomeVencedor: String
+        val pontosVencedor: Int
+        val pontosPerdedor: Int
+
         if (jogador == 1) {
             vitoriasJ1++
-            Toast.makeText(this, "Jogador 1 venceu!", Toast.LENGTH_SHORT).show()
-        }else{
+            nomeVencedor = nomeJ1
+            pontosVencedor = pontosJ1
+            pontosPerdedor = pontosJ2
+        } else {
             vitoriasJ2++
-            Toast.makeText(this, "Jogador 2 venceu!", Toast.LENGTH_SHORT).show()
+            nomeVencedor = nomeJ2
+            pontosVencedor = pontosJ2
+            pontosPerdedor = pontosJ1
         }
-        pontosJ1 = 0
-        pontosJ2 = 0
-        atualizarTela()
+
+        AlertDialog.Builder(this)
+            .setTitle("Partida finalizada")
+            .setMessage("O $nomeVencedor venceu a partida! Por $pontosVencedor a $pontosPerdedor.")
+            .setCancelable(false)
+            .setPositiveButton("OK") { _, _ ->
+                pontosJ1 = 0
+                pontosJ2 = 0
+                atualizarTela()
+            }
+            .show()
     }
 }
 

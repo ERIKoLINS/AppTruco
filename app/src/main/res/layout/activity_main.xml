@@ -30,8 +30,7 @@
 
     <Button
         android:id="@+id/ponto1_jog1"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
+        style="@style/BotaoPontuacao"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="+1"
@@ -43,9 +42,8 @@
 
     <Button
         android:id="@+id/ponto3_jog1"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="5dp"
+        style="@style/BotaoPontuacao"
+        android:layout_marginStart="4dp"
         android:text="+3"
         app:layout_constraintEnd_toStartOf="@+id/ponto6_jog1"
         app:layout_constraintHorizontal_bias="0.5"
@@ -55,9 +53,8 @@
 
     <Button
         android:id="@+id/ponto6_jog1"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="5dp"
+        style="@style/BotaoPontuacao"
+        android:layout_marginStart="4dp"
         android:text="+6"
         app:layout_constraintEnd_toStartOf="@+id/ponto9_jog1"
         app:layout_constraintHorizontal_bias="0.5"
@@ -67,9 +64,8 @@
 
     <Button
         android:id="@+id/ponto9_jog1"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="5dp"
+        style="@style/BotaoPontuacao"
+        android:layout_marginStart="4dp"
         android:text="+9"
         app:layout_constraintEnd_toStartOf="@+id/ponto12_jog1"
         app:layout_constraintHorizontal_bias="0.5"
@@ -79,9 +75,8 @@
 
     <Button
         android:id="@+id/ponto12_jog1"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="5dp"
+        style="@style/BotaoPontuacao"
+        android:layout_marginStart="4dp"
         android:layout_marginEnd="8dp"
         android:text="+12"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,8 +87,7 @@
 
     <Button
         android:id="@+id/ponto1_jog2"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
+        style="@style/BotaoPontuacao"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="+1"
@@ -105,9 +99,8 @@
 
     <Button
         android:id="@+id/ponto3_jog2"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="5dp"
+        style="@style/BotaoPontuacao"
+        android:layout_marginStart="4dp"
         android:text="+3"
         app:layout_constraintEnd_toStartOf="@+id/ponto6_jog2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -117,9 +110,8 @@
 
     <Button
         android:id="@+id/ponto6_jog2"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="5dp"
+        style="@style/BotaoPontuacao"
+        android:layout_marginStart="4dp"
         android:text="+6"
         app:layout_constraintEnd_toStartOf="@+id/ponto9_jog2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -129,9 +121,8 @@
 
     <Button
         android:id="@+id/ponto9_jog2"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="5dp"
+        style="@style/BotaoPontuacao"
+        android:layout_marginStart="4dp"
         android:text="+9"
         app:layout_constraintEnd_toStartOf="@+id/ponto12_jog2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -141,9 +132,8 @@
 
     <Button
         android:id="@+id/ponto12_jog2"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="5dp"
+        style="@style/BotaoPontuacao"
+        android:layout_marginStart="4dp"
         android:layout_marginEnd="8dp"
         android:text="+12"
         app:layout_constraintEnd_toEndOf="parent"
@@ -174,6 +164,7 @@
 
     <Button
         android:id="@+id/historico"
+        style="@style/BotaoPontuacao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -187,12 +178,13 @@
 
     <Button
         android:id="@+id/zerar_historico"
+        style="@style/BotaoPontuacao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:text="Zerar historioco"
+        android:text="Zerar histórico"
         app:layout_constraintEnd_toEndOf="@+id/ponto12_jog2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/ponto1_jog2"
@@ -201,6 +193,7 @@
 
     <Button
         android:id="@+id/inf_nomes"
+        style="@style/BotaoPontuacao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
