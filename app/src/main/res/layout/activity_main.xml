@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Jogador1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="50dp"
+        android:text="Jogador 1:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/jogador2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Jogador 2:"
+        app:layout_constraintStart_toStartOf="@+id/Jogador1"
+        app:layout_constraintTop_toBottomOf="@+id/ponto1_jog1"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/ponto1_jog1"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="+1"
+        app:layout_constraintEnd_toStartOf="@+id/ponto3_jog1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Jogador1"
+        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/ponto3_jog1"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="5dp"
+        android:text="+3"
+        app:layout_constraintEnd_toStartOf="@+id/ponto6_jog1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ponto1_jog1"
+        app:layout_constraintTop_toTopOf="@+id/ponto1_jog1"
+        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/ponto6_jog1"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="5dp"
+        android:text="+6"
+        app:layout_constraintEnd_toStartOf="@+id/ponto9_jog1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ponto3_jog1"
+        app:layout_constraintTop_toTopOf="@+id/ponto1_jog1"
+        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/ponto9_jog1"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="5dp"
+        android:text="+9"
+        app:layout_constraintEnd_toStartOf="@+id/ponto12_jog1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ponto6_jog1"
+        app:layout_constraintTop_toTopOf="@+id/ponto1_jog1"
+        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/ponto12_jog1"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="8dp"
+        android:text="+12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ponto9_jog1"
+        app:layout_constraintTop_toTopOf="@+id/ponto1_jog1"
+        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/ponto1_jog2"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="+1"
+        app:layout_constraintEnd_toStartOf="@+id/ponto3_jog2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jogador2"
+        tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/ponto3_jog2"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="5dp"
+        android:text="+3"
+        app:layout_constraintEnd_toStartOf="@+id/ponto6_jog2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ponto1_jog2"
+        app:layout_constraintTop_toTopOf="@+id/ponto1_jog2"
+        tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/ponto6_jog2"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="5dp"
+        android:text="+6"
+        app:layout_constraintEnd_toStartOf="@+id/ponto9_jog2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ponto3_jog2"
+        app:layout_constraintTop_toTopOf="@+id/ponto1_jog2"
+        tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/ponto9_jog2"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="5dp"
+        android:text="+9"
+        app:layout_constraintEnd_toStartOf="@+id/ponto12_jog2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ponto6_jog2"
+        app:layout_constraintTop_toTopOf="@+id/ponto1_jog2"
+        tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/ponto12_jog2"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="8dp"
+        android:text="+12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ponto9_jog2"
+        app:layout_constraintTop_toTopOf="@+id/ponto1_jog2"
+        tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txtPontosJ1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/Jogador1"
+        app:layout_constraintTop_toTopOf="@+id/Jogador1"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/txtPontosJ2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/jogador2"
+        app:layout_constraintTop_toTopOf="@+id/jogador2"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/historico"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="Historico de jogadas"
+        app:layout_constraintEnd_toEndOf="@+id/ponto12_jog2"
+        app:layout_constraintStart_toStartOf="@+id/ponto1_jog2"
+        app:layout_constraintTop_toBottomOf="@+id/ponto6_jog2"
+        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/zerar_historico"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Zerar historioco"
+        app:layout_constraintEnd_toEndOf="@+id/ponto12_jog2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/ponto1_jog2"
+        app:layout_constraintTop_toBottomOf="@+id/historico"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/inf_nomes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Informar nomes"
+        app:layout_constraintEnd_toEndOf="@+id/ponto12_jog2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/ponto1_jog2"
+        app:layout_constraintTop_toBottomOf="@+id/zerar_historico"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

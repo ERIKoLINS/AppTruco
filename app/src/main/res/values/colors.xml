@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Basic colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Green colors - Light -->
+    <color name="green_200">#FF81C784</color>
+    <color name="green_500">#FF2E8B57</color>
+    <color name="green_700">#FF1B5E20</color>
+
+    <!-- Green colors - Dark -->
+    <color name="green_200_dark">#FFA5D6A7</color>
+    <color name="green_500_dark">#FF66BB6A</color>
+    <color name="green_700_dark">#FF2E7D32</color>
+
+    <!-- Gold colors - Light -->
+    <color name="gold_200">#FFFFE082</color>
+    <color name="gold_500">#FFFFC107</color>
+    <color name="gold_700">#FFFF8F00</color>
+
+    <!-- Gold colors - Dark -->
+    <color name="gold_200_dark">#FFFFE082</color>
+    <color name="gold_500_dark">#FFFFD54F</color>
+    <color name="gold_700_dark">#FFFFB300</color>
+
+    <!-- Red colors - Light -->
+    <color name="red_200">#FFEF9A9A</color>
+    <color name="red_500">#FFE53935</color>
+    <color name="red_700">#FFB71C1C</color>
+
+    <!-- Red colors - Dark -->
+    <color name="red_200_dark">#FFEF9A9A</color>
+    <color name="red_500_dark">#FFEF5350</color>
+    <color name="red_700_dark">#FFC62828</color>
+
+    <!-- Background - Light -->
+    <color name="background">#FFF5F7F2</color>
+    <color name="surface">#FFFFFFFF</color>
+
+    <!-- Background - Dark -->
+    <color name="background_dark">#FF101C18</color>
+    <color name="surface_dark">#FF1B2B24</color>
+
+    <!-- Text - Light -->
+    <color name="text_primary">#FF17251E</color>
+    <color name="text_secondary">#FF65746A</color>
+
+    <!-- Text - Dark -->
+    <color name="text_primary_dark">#FFF5F5F0</color>
+    <color name="text_secondary_dark">#FFB7C4BC</color>
+
+</resources>
