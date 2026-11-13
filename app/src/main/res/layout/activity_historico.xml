@@ -33,6 +33,7 @@
 
     <Button
         android:id="@+id/voltar"
+        style="@style/BotaoPontuacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="voltar"
